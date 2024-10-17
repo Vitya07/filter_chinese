@@ -1,13 +1,8 @@
-ch_mas = ["妈妈","爸爸","学习","学","学校"]
-readystr = "".join(map(str, ch_mas))
-filt_ch_mas = []
+from app import app, db
 
-
-print(readystr)
-
-
-for i in readystr:
-    filt_ch_mas.append(i)
-
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()  # Создаём таблицы, если их ещё нет
+    app.run(debug=~False)
     
-print(set(filt_ch_mas))
+    
