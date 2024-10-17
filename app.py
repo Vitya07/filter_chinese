@@ -106,8 +106,3 @@ def clear_words():
     db.session.commit()
     flash('All words cleared.')
     return redirect(url_for('profile'))
-
-if __name__ == '__main__':
-    with app.app_context():
-        db.create_all()  # Создаём таблицы, если их ещё нет
-    app.run(debug=True)
