@@ -1,0 +1,101 @@
+/* Основные стили */
+body {
+    background-color: #f8f9fa; /* Светлый фон */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #343a40; /* Темный текст */
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили заголовка */
+header {
+    background-color: #007bff; /* Основной цвет */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Стили навигации */
+nav {
+    margin: 15px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d1e7dd; /* Цвет при наведении */
+}
+
+/* Стили для контента */
+.content {
+    max-width: 1200px; /* Максимальная ширина контента */
+    margin: 20px auto; /* Центрирование */
+    padding: 20px; /* Отступы */
+    background: white; /* Белый фон для контента */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Стили для виджетов */
+.widget {
+    background: #f1f1f1; /* Цвет фона виджета */
+    border-radius: 10px; /* Скругленные края */
+    margin: 15px 0; /* Отступы между виджетами */
+    padding: 20px; /* Отступы внутри виджета */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    transition: transform 0.3s; /* Плавный переход */
+}
+
+.widget:hover {
+    transform: translateY(-3px); /* Подъем при наведении */
+}
+
+/* Стили для заголовков виджетов */
+.widget h3 {
+    margin-top: 0; /* Убрать верхний отступ */
+    color: #007bff; /* Цвет заголовка виджета */
+}
+
+/* Стили для кнопок */
+button {
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #c82333; /* Цвет кнопок при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Отступы для мобильных устройств */
+    }
+
+    h1 {
+        font-size: 2em; /* Меньший размер заголовка на мобильных */
+    }
+
+    .content {
+        padding: 10px; /* Меньшие отступы для мобильных */
+    }
+}

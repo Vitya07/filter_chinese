@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Your Unique Characters</h2>
+    <ul>
+        {% for char in characters %}
+            <li>
+                {{ char }}
+                <form action="{{ url_for('delete_character', char=char) }}" method="POST" style="display:inline;">
+                    <button type="submit" style="color: black;">[Delete]</button>
+                </form>
+            </li>
+        {% endfor %}    
+    </ul>
+
+    <form action="{{ url_for('clear_words') }}" method="POST" style="margin-top: 10px;">
+        <button type="submit" style="background-color: red; color: white;">
+            Clear All Words
+        </button>
+    </form>
+{% endblock %}

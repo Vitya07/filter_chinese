@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>Filtered Unique Characters</h2>
+    <ul>
+        {% for char in characters %}
+            <li>{{ char }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Your Filtered Words</h3>
+    <ul>
+        {% for word in words %}
+            <li>
+                {{ word.word }}
+                <a href="{{ url_for('delete_word', word_id=word.id) }}" 
+                   style="color: red; text-decoration: none;">[Delete]</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <form action="{{ url_for('clear_words') }}" method="POST" style="margin-top: 10px;">
+        <button type="submit" style="background-color: red; color: white;">
+            Clear All Words
+        </button>
+    </form>
+{% endblock %}
